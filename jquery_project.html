@@ -7,11 +7,24 @@
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
 <script src="jquery_project.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+});
+</script>
 </head>
 <body>
     <div id="menu">
         <ul>
-        <li><a href="#">Link One</a></li>
+        <li><a href="#">Link One</a>
+					<ul class="dropdown-menu">
+					<li><a href="#">Dropdown Link</a></li>
+					<li><a href="#">Another Dropdown Link</a></li>
+					</ul>
+				</li>
         <li><a href="#">Link Two</a>
         <ul class="dropdown-menu">
         <li><a href="#">Dropdown Link</a></li>
@@ -20,6 +33,9 @@
         </li>
         </ul>
     </div>
+		<p>If you click on me, I will disappear.</p>
+		<p>Click me away!</p>
+		<p>Click me too!</p>
 </body>
 
 </html>
